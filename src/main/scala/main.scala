@@ -1,5 +1,7 @@
 import zio.ZIO
 
+import java.time.Instant
+
 @main
 def main(): Unit = {
   println("Hello world!")
@@ -26,6 +28,10 @@ def main(): Unit = {
     } yield println(s"1st: $a, 2nd: $b")
 
   forked.run(_ => ())
+
+  val stackSafety = ZIO.succeed(println(s"Howdy! ${Instant.now()}")).repeat(10)
+
+  stackSafety.run(_ => ())
 
   Thread.sleep(3000)
 
