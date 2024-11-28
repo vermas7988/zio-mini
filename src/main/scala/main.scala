@@ -20,18 +20,18 @@ def main(): Unit = {
     c(2)
   }
 
-  val forked =
-    for {
-      f <- asyncZio1.fork
-      b <- asyncZio2
-      a <- f.join
-    } yield println(s"1st: $a, 2nd: $b")
+//  val forked =
+//    for {
+//      f <- asyncZio1.fork
+//      b <- asyncZio2
+//      a <- f.join
+//    } yield println(s"1st: $a, 2nd: $b")
+//
+//  forked.unsafeRunSync
 
-  forked.run(_ => ())
+  val stackSafety = ZIO.succeedNow(println(s"Howdy!"))//.repeat(10)
 
-  val stackSafety = ZIO.succeed(println(s"Howdy! ${Instant.now()}")).repeat(10)
-
-  stackSafety.run(_ => ())
+  stackSafety.unsafeRunFiber
 
   Thread.sleep(3000)
 
