@@ -1,44 +1,26 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-### IntelliJ IDEA ###
+project/zecret
+project/travis-deploy-key
+project/secrets.tar.xz
+target
+test-output/
+.sbtopts
+.bsp
+project/.sbt
+test-output/
+.bloop
+.metals
+metals.sbt
+*/metals.sbt
 .idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+coursier
 .DS_Store
+metals.sbt
+project/metals.sbt
+project/project/metals.sbt
+sbt.json
+.bsp/
+project/project/
+*.iml
 
-### Scala ###
-.bsp/   
+.bsp/
+.vscode
