@@ -3,3 +3,4 @@
 - Declarative encoding
 - stack safety(no stack overflow errors)
 - lazy evaluation/execution.
+- concurrency safety
